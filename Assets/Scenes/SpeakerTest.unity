@@ -2934,6 +2934,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speakersParent: {fileID: 598587613}
+  centerSpeakerTransform: {fileID: 503292217}
+  initialColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+  targetColor: {r: 0.21960786, g: 0.21960786, b: 1, a: 1}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
 --- !u!1 &650672841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4455,7 +4459,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5159,7 +5163,7 @@ Transform:
   m_GameObject: {fileID: 920921510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
