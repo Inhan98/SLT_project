@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     private const int totalTrials = 30;
 
+    public List<int> RandomNoiseList = new List<int>();
+
     void Start()
     {
         InitializeSpeakers();
@@ -85,10 +87,12 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartTrials()
     {
+        ShuffleNoise();
         while (trials < totalTrials)
         {
             yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
-            PlayRandomSpeaker();
+            PlayRandomSpeaker(RandomNoiseList[trials]);
+            //PlayRandomSpeaker();
             yield return new WaitUntil(() => currentSpeaker == null);
             yield return new WaitForSeconds(2.0f);
             ResetSpeakerColor();
@@ -146,6 +150,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ShuffleNoise()
+    {
+        RandomNoiseList = new List<int>();
+        for (int i = 0; i <10; i++)
+        {
+            RandomNoiseList.Add(0);
+            RandomNoiseList.Add(1);
+            RandomNoiseList.Add(2);
+        }
+        Debug.Log("Before shuffle: " + string.Join(", ", RandomNoiseList));
+        ShuffleList(RandomNoiseList);
+        Debug.Log("After shuffle: " + string.Join(", ", RandomNoiseList));
+
+    }
+
+    public void ShuffleList<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+
+            int randomIndex = UnityEngine.Random.Range(0, list.Count);
+
+            T temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
+    }
+
     public void ResetGame()
     {
         if (speakers.Count == 0)
@@ -170,7 +202,16 @@ public class GameManager : MonoBehaviour
         LogSelection(currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "Played");
     }
 
+    public void PlayRandomSpeaker(int cnt)
+    {
+        int randomIndex = UnityEngine.Random.Range(0, speakers.Count);
+        currentSpeaker = speakers[randomIndex];
 
+        currentSpeaker.PlayWhiteNoise(cnt);
+        Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
+
+        LogSelection(currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "Played");
+    }
 
 
     public void PlaySoundOnSpecificSpeaker(int speakerIndex)
@@ -274,6 +315,11 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Log saved: {timestamp}, Selected: {selectedSpeakerName}, Correct: {correctSpeakerName}, Result: {result}");
 
+    }
+
+    public int GetSpeakerCount()
+    {
+        return speakers.Count;
     }
 
 }

@@ -372,11 +372,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!1 &84727094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
@@ -401,11 +405,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &84727097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,11 +1314,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &318744147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2216,11 +2228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &409057093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2779,11 +2795,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!1001 &592211544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2938,6 +2958,7 @@ MonoBehaviour:
   initialColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
   targetColor: {r: 0.21960786, g: 0.21960786, b: 1, a: 1}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!1 &650672841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,11 +3930,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &725457574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4163,11 +4188,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &771030097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4596,11 +4625,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &880088462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5785,11 +5818,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &976464468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6187,11 +6224,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1061072377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6441,11 +6482,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1065992032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6695,11 +6740,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1163516698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6949,11 +6998,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1202947635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7371,11 +7424,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1247757380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7675,11 +7732,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1327509412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10072,11 +10133,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1374880954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10494,11 +10559,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1661242926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10832,11 +10901,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1709621838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11382,11 +11455,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1835011602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11636,11 +11713,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &1956483437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12164,11 +12245,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
+  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  RandomNoiseList: 
 --- !u!114 &2105086242
 MonoBehaviour:
   m_ObjectHideFlags: 0
