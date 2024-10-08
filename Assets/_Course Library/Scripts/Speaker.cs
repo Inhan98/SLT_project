@@ -21,6 +21,8 @@ public class Speaker : MonoBehaviour
     public Material wrongMaterial; // 오답일 때 적용할 재질
     public Material defaultMaterial; // 기본 재질
 
+    public bool isFake;
+
     public List<int> RandomNoiseList = new List<int>();
 
     void Awake()

@@ -380,6 +380,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!1 &84727094 stripped
 GameObject:
@@ -393,27 +394,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1980695274}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &84727096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84727094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &84727097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +460,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 84727096}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -639,6 +619,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &84727103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84727094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &90649360
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +912,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1374880953}
+      addedObject: {fileID: 1374880960}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1001 &191617490
 PrefabInstance:
@@ -994,7 +996,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1202947634}
+      addedObject: {fileID: 1202947641}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &215653429
 GameObject:
@@ -1302,27 +1304,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 422118412}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &318744146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318744144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &318744147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,7 +1370,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 318744146}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -1548,6 +1529,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &318744153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318744144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &364578160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,27 +2219,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 718491901}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &409057092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409057090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &409057093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2303,7 +2285,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 409057092}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -2462,6 +2444,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &409057099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409057090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &422118412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2544,7 +2548,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 318744146}
+      addedObject: {fileID: 318744153}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &503292213 stripped
 GameObject:
@@ -2803,6 +2807,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!1001 &592211544
 PrefabInstance:
@@ -2886,7 +2891,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1956483436}
+      addedObject: {fileID: 1956483443}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &598587612
 GameObject:
@@ -3820,7 +3825,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 409057092}
+      addedObject: {fileID: 409057099}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1001 &725457570
 PrefabInstance:
@@ -3904,7 +3909,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 725457573}
+      addedObject: {fileID: 725457580}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!4 &725457571 stripped
 Transform:
@@ -3918,27 +3923,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 725457570}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &725457573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725457572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &725457574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4005,7 +3989,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 725457573}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -4164,6 +4148,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &725457580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725457572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &771030094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
@@ -4176,27 +4182,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1330629332}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &771030096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771030094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &771030097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4263,7 +4248,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 771030096}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -4422,6 +4407,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &771030103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771030094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &782408563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4613,27 +4620,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1393073592}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &880088461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880088459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &880088462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4700,7 +4686,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880088461}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -4859,6 +4845,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &880088468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880088459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &908173675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,7 +5716,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1061072376}
+      addedObject: {fileID: 1061072383}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1001 &976464464
 PrefabInstance:
@@ -5792,7 +5800,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 976464467}
+      addedObject: {fileID: 976464474}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!4 &976464465 stripped
 Transform:
@@ -5806,27 +5814,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 976464464}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &976464467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976464466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &976464468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5893,7 +5880,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976464467}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -6052,6 +6039,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &976464474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976464466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &1002109607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6134,7 +6143,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1247757379}
+      addedObject: {fileID: 1247757386}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!850595691 &1031142411
 LightingSettings:
@@ -6212,27 +6221,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 940611503}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1061072376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061072374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1061072377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6299,7 +6287,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1061072376}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -6458,6 +6446,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1061072383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061072374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &1065992029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
@@ -6490,6 +6500,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!114 &1065992032
 MonoBehaviour:
@@ -6748,6 +6759,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!114 &1163516698
 MonoBehaviour:
@@ -6986,27 +6998,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 191617490}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1202947634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202947632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1202947635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7073,7 +7064,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1202947634}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -7232,6 +7223,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1202947641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202947632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &1229353666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7412,27 +7425,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1002109607}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1247757379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247757377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1247757380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7499,7 +7491,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1247757379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -7658,6 +7650,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1247757386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247757377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &1313711679
 GameObject:
   m_ObjectHideFlags: 0
@@ -7740,6 +7754,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!114 &1327509412
 MonoBehaviour:
@@ -8048,7 +8063,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 771030096}
+      addedObject: {fileID: 771030103}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &1365894882
 GameObject:
@@ -10121,27 +10136,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 154727187}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1374880953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374880951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1374880954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10208,7 +10202,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1374880953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -10367,6 +10361,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1374880960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374880951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &1393073592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10449,7 +10465,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 880088461}
+      addedObject: {fileID: 880088468}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1001 &1532867734
 PrefabInstance:
@@ -10533,7 +10549,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1835011601}
+      addedObject: {fileID: 1835011608}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &1661242923 stripped
 GameObject:
@@ -10567,6 +10583,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!114 &1661242926
 MonoBehaviour:
@@ -10909,6 +10926,7 @@ MonoBehaviour:
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
   RandomNoiseList: 
 --- !u!114 &1709621838
 MonoBehaviour:
@@ -11323,7 +11341,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2105086241}
+      addedObject: {fileID: 2105086248}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1 &1783536271
 GameObject:
@@ -11443,27 +11461,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1532867734}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1835011601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835011599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1835011602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11530,7 +11527,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1835011601}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -11689,6 +11686,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1835011608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835011599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &1956483434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
@@ -11701,27 +11720,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 592211544}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1956483436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956483434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &1956483437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11788,7 +11786,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1956483436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -11947,6 +11945,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1956483443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956483434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1001 &1980695274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12029,7 +12049,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650474337536192791, guid: b1537290f47c63744ac10546e5a71f18,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 84727096}
+      addedObject: {fileID: 84727103}
   m_SourcePrefab: {fileID: 100100000, guid: b1537290f47c63744ac10546e5a71f18, type: 3}
 --- !u!1001 &1983678122
 PrefabInstance:
@@ -12233,27 +12253,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1741483453}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2105086241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105086239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personalizedHRTF: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  genericHRTF: {fileID: 8300000, guid: fe112c6648072400daed693075b62682, type: 3}
-  unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
-  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
-  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
-  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
-  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
-  RandomNoiseList: 
 --- !u!114 &2105086242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12320,7 +12319,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2105086241}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Speaker, Assembly-CSharp
         m_MethodName: OnSelectEntered
         m_Mode: 0
@@ -12479,6 +12478,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2105086248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105086239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4122af3d08727b438cd068550db1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalizedHRTF: {fileID: 0}
+  genericHRTF: {fileID: 0}
+  unrelatedHRTF: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
+  wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
+  wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  isFake: 0
+  RandomNoiseList: 
 --- !u!1 &2124398258
 GameObject:
   m_ObjectHideFlags: 0

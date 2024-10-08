@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
 {
     public Transform speakersParent; // 스피커들이 포함된 빈 게임 오브젝트
     private List<Speaker> speakers = new List<Speaker>();
+    private List<Speaker> nonSpeakerObjects = new List<Speaker>();
     private Speaker currentSpeaker;
     private Speaker specificSpeaker;
     private string filePath;
 
-    private bool isLookingAtCenterSpeaker = false;
+    //private bool isLookingAtCenterSpeaker = false;
     public Transform centerSpeakerTransform;
     private Renderer centerSpeakerRenderer;
     public Color initialColor = Color.white;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     private int trials = 0;
 
     private const int totalTrials = 30;
+    private bool isClickable = true;
 
     public List<int> RandomNoiseList = new List<int>();
 
@@ -73,14 +75,16 @@ public class GameManager : MonoBehaviour
         foreach (Transform child in speakersParent)
         {
             Speaker speaker = child.GetComponent<Speaker>();
-            if (speaker != null)
+            if (speaker != null && speaker.isFake == false)
             {
-                
                 speakers.Add(speaker);
+                Debug.Log("Register " + speaker.gameObject.name);
             }
             else
             {
-                Debug.LogError($"No Speaker component found on {child.name}");
+                nonSpeakerObjects.Add(speaker);
+                Debug.Log("Don't register " + child.gameObject.name);
+                //Debug.LogError($"No Speaker component found on {child.name}");
             }
         }
     }
@@ -91,6 +95,8 @@ public class GameManager : MonoBehaviour
         while (trials < totalTrials)
         {
             yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            isClickable = true;
+
             PlayRandomSpeaker(RandomNoiseList[trials]);
             //PlayRandomSpeaker();
             yield return new WaitUntil(() => currentSpeaker == null);
@@ -144,6 +150,11 @@ public class GameManager : MonoBehaviour
     public void ResetSpeakerColor()
     {
         foreach (var speaker in speakers)
+        {
+            Debug.Log("Register Speaker "+speaker.gameObject.name);
+            speaker.ResetMaterial();
+        }
+        foreach (var speaker in nonSpeakerObjects)
         {
             Debug.Log("Register Speaker "+speaker.gameObject.name);
             speaker.ResetMaterial();
@@ -250,6 +261,10 @@ public class GameManager : MonoBehaviour
 
     public void CheckSpeaker(Speaker selectedSpeaker)
     {
+        if(!isClickable) return;
+
+        isClickable = false;
+
         Quaternion headsetRotation = InputTracking.GetLocalRotation(XRNode.Head);
         Vector3 eulerAngles = headsetRotation.eulerAngles;
         float yaw = eulerAngles.x;
@@ -320,6 +335,12 @@ public class GameManager : MonoBehaviour
     public int GetSpeakerCount()
     {
         return speakers.Count;
+    }
+
+
+    public void SetClickable(bool clickable)
+    {
+        isClickable = clickable;
     }
 
 }
