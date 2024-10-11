@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private const int totalTrials = 30;
     private bool isClickable = true;
 
-    public List<int> RandomNoiseList = new List<int>();
+    private List<int> RandomNoiseList = new List<int>();
 
     void Start()
     {
