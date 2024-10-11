@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     private int trials = 0;
 
+    private List<string> HRTFlist = new List<string> { "Personalized", "Generic", "Unrelated" };
+
+    private string HRTF_type;
+
     private const int totalTrials = 30;
     private bool isClickable = true;
 
@@ -58,7 +62,7 @@ public class GameManager : MonoBehaviour
         {
             using (StreamWriter writer = new StreamWriter(filePath, false, Encoding.UTF8))
             {
-                writer.WriteLine("Time, Selected Speaker, Correct Speaker, Result");
+                writer.WriteLine("Time, Trials, Selected Speaker, Correct Speaker, HRTF, Result");
             }
         }
 
@@ -119,9 +123,13 @@ public class GameManager : MonoBehaviour
 
             Vector3 toCenterSpeaker = (centerSpeakerTransform.position - Camera.main.transform.position).normalized;
 
+            Vector3 headEulerAngles = headsetRotation.eulerAngles; 
+            Debug.Log($"Head angle (Pitch: {headEulerAngles.x}, Yaw: {headEulerAngles.y}, Roll: {headEulerAngles.z})");
+
             if (Vector3.Dot(forward, toCenterSpeaker) > 0.95f)
             {
                 lookTime += Time.deltaTime;
+
 
                 float colorLerpValue = lookTime / 3.0f;
                 Color currentColor = Color.Lerp(initialColor, targetColor, colorLerpValue);
@@ -210,18 +218,19 @@ public class GameManager : MonoBehaviour
         currentSpeaker.PlaySound();
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
-        LogSelection(currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "Played");
+        LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "X", "Played");
     }
 
     public void PlayRandomSpeaker(int cnt)
     {
         int randomIndex = UnityEngine.Random.Range(0, speakers.Count);
         currentSpeaker = speakers[randomIndex];
+        HRTF_type = HRTFlist[cnt];
 
         currentSpeaker.PlayWhiteNoise(cnt);
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
-        LogSelection(currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "Played");
+        LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
     }
 
 
@@ -274,22 +283,25 @@ public class GameManager : MonoBehaviour
         {
             if (selectedSpeaker == currentSpeaker)
             {
-                selectedSpeaker.SetMaterial(selectedSpeaker.correctMaterial);
-                selectedSpeaker.PlayCorrectSound();
-
+                //selectedSpeaker.SetMaterial(selectedSpeaker.correctMaterial);
+                //selectedSpeaker.PlayCorrectSound();
+                selectedSpeaker.SetMaterial(selectedSpeaker.clickMaterial);
+                selectedSpeaker.PlayClickSound();
                 result = "Correct";
                 Debug.Log("Current Heading (Yaw): " + yaw);
                 Debug.Log("Correct! You selected the right speaker.");
             }
             else
             {
-                selectedSpeaker.SetMaterial(selectedSpeaker.wrongMaterial);
-                selectedSpeaker.PlayWrongSound();
+                //selectedSpeaker.SetMaterial(selectedSpeaker.wrongMaterial);
+                //selectedSpeaker.PlayWrongSound();
+                selectedSpeaker.SetMaterial(selectedSpeaker.clickMaterial);
+                selectedSpeaker.PlayClickSound();
                 result = "Wrong";
                 Debug.Log("Current Heading (Yaw): " + yaw);
                 Debug.Log("Wrong! You selected the wrong speaker.");
             }
-            LogSelection(selectedSpeaker.gameObject.name, currentSpeaker ? currentSpeaker.gameObject.name : "None", result);
+            LogSelection(trials.ToString(),selectedSpeaker.gameObject.name, currentSpeaker ? currentSpeaker.gameObject.name : "None", HRTF_type,result);
         }
         else 
         {
@@ -310,7 +322,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("specific Heading (Yaw): " + yaw);
                 Debug.Log("Wrong! You selected the wrong speaker.");
             }
-            LogSelection(selectedSpeaker.gameObject.name, specificSpeaker ? specificSpeaker.gameObject.name : "None", result);
+            LogSelection(trials.ToString(),selectedSpeaker.gameObject.name, specificSpeaker ? specificSpeaker.gameObject.name : "None", HRTF_type, result);
 
         }
         
@@ -319,16 +331,16 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void LogSelection(string selectedSpeakerName, string correctSpeakerName, string result)
+    private void LogSelection(string trials, string selectedSpeakerName, string correctSpeakerName, string HRTF_type,string result)
     {
         string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
         using (StreamWriter writer = new StreamWriter(filePath, true, Encoding.UTF8))
         {
-            writer.WriteLine($"{timestamp}, {selectedSpeakerName}, {correctSpeakerName}, {result}");
+            writer.WriteLine($"{timestamp}, {trials}, {selectedSpeakerName}, {correctSpeakerName}, {HRTF_type},{result}");
         }
 
-        Debug.Log($"Log saved: {timestamp}, Selected: {selectedSpeakerName}, Correct: {correctSpeakerName}, Result: {result}");
+        Debug.Log($"Log saved: {timestamp}, Trials: {trials}, Selected: {selectedSpeakerName}, Correct: {correctSpeakerName}, HRTF: {HRTF_type},Result: {result}");
 
     }
 

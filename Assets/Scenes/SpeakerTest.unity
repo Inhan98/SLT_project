@@ -511,9 +511,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: 45277e98f7b7d704d86675674af49380, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!1 &77666356
@@ -888,9 +890,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &139200557
@@ -1797,9 +1801,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: 17e53586d00594414b8cb9c4bf7cfd7e, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &338609137
@@ -2980,9 +2986,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1001 &411885503
@@ -3577,9 +3585,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: 0c58325e24e1d75498ce49518a53e990, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!1 &575212122
@@ -5341,9 +5351,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &771030094 stripped
@@ -5600,9 +5612,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1001 &782408563
@@ -6306,9 +6320,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &918842940
@@ -7650,9 +7666,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1001 &1002109607
@@ -8057,9 +8075,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &1065992029 stripped
@@ -8091,9 +8111,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: 21b086c158087864b98dd3de59f94137, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!114 &1065992032
@@ -8554,9 +8576,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: a705cbaf13c7b8744bbf7788f5b97d7d, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!114 &1163516698
@@ -9038,9 +9062,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1001 &1229353666
@@ -9465,9 +9491,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &1278511214
@@ -9683,9 +9711,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: a5f85ff3ec568cc4cb0470d39db07cd4, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!114 &1327509412
@@ -12440,9 +12470,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1001 &1393073592
@@ -12882,9 +12914,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!114 &1549939273
@@ -13493,9 +13527,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!114 &1575561835
@@ -13886,9 +13922,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: 5beb3328b7cda564795bcc1300d3c0fd, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!114 &1661242926
@@ -14363,9 +14401,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 8300000, guid: f5a773a04508c01409af86ef2c3d7737, type: 3}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 0
   RandomNoiseList: 
 --- !u!114 &1709621838
@@ -15545,9 +15585,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &1879616051
@@ -16062,9 +16104,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &1963538690
@@ -16859,9 +16903,11 @@ MonoBehaviour:
   unrelatedHRTF: {fileID: 0}
   correctSound: {fileID: 8300000, guid: ffa67130b8bb74c7f8bc2b3ce9149daf, type: 3}
   wrongSound: {fileID: 8300000, guid: 73fe6f8dbb7a64c96a1d52f467088b5d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0d9ba9deac23f4ff199b989fe352e768, type: 3}
   correctMaterial: {fileID: 2100000, guid: 0c589e185d0c76a48ac19e74ae0665c2, type: 2}
   wrongMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 4f816cbd04e37fa47ae16f6a8a40a59d, type: 2}
+  clickMaterial: {fileID: 2100000, guid: 37a7c2a9456aa483c8adc48ced2c492d, type: 2}
   isFake: 1
   RandomNoiseList: 
 --- !u!1 &2106599469

@@ -17,9 +17,13 @@ public class Speaker : MonoBehaviour
     public AudioClip correctSound; // 정답일 때 재생할 소리
     public AudioClip wrongSound; // 오답일 때 재생할 소리
 
+    public AudioClip clickSound; // 클릭할 때 재생할 소리
+
     public Material correctMaterial; // 정답일 때 적용할 재질
     public Material wrongMaterial; // 오답일 때 적용할 재질
     public Material defaultMaterial; // 기본 재질
+
+    public Material clickMaterial;
 
     public bool isFake;
 
@@ -113,6 +117,15 @@ public class Speaker : MonoBehaviour
             this.audioSource.PlayOneShot(this.wrongSound);
         }
     }
+
+    public void PlayClickSound()
+    {
+        if (this.audioSource != null && this.clickSound != null)
+        {
+            this.audioSource.PlayOneShot(this.clickSound);
+        }        
+    }
+
 
     public void ResetMaterial()
     {
