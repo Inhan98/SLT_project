@@ -28,10 +28,11 @@ public class GameManager : MonoBehaviour
 
     private string HRTF_type;
 
-    private const int totalTrials = 30;
+    private const int totalTrials = 105;
     private bool isClickable = true;
 
     private List<int> RandomNoiseList = new List<int>();
+    private List<int> RandomSpeakersList = new List<int>();
 
     void Start()
     {
@@ -96,12 +97,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartTrials()
     {
         ShuffleNoise();
+        ShuffleSpeakers();
         while (trials < totalTrials)
         {
-            yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            //yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
             isClickable = true;
 
-            PlayRandomSpeaker(RandomNoiseList[trials]);
+            PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]);
             //PlayRandomSpeaker();
             yield return new WaitUntil(() => currentSpeaker == null);
             yield return new WaitForSeconds(2.0f);
@@ -171,16 +173,30 @@ public class GameManager : MonoBehaviour
 
     public void ShuffleNoise()
     {
-        RandomNoiseList = new List<int>();
-        for (int i = 0; i <10; i++)
+        for (int i = 0; i <35; i++)
         {
             RandomNoiseList.Add(0);
             RandomNoiseList.Add(1);
             RandomNoiseList.Add(2);
         }
-        Debug.Log("Before shuffle: " + string.Join(", ", RandomNoiseList));
+        print("Total count of Noises:  "+ RandomNoiseList.Count);
+        Debug.Log("Before shuffle(Noise): " + string.Join(", ", RandomNoiseList));
         ShuffleList(RandomNoiseList);
-        Debug.Log("After shuffle: " + string.Join(", ", RandomNoiseList));
+        Debug.Log("After shuffle(Noise): " + string.Join(", ", RandomNoiseList));
+    }
+
+    public void ShuffleSpeakers()
+    {
+        int SpeakerNums = GetSpeakerCount();
+        for (int i = 0; i <15; i++)
+        {
+            for (int j=0; j < SpeakerNums; j++)
+                RandomSpeakersList.Add(j);
+        }
+        print("Total count of Speakers:  "+ RandomSpeakersList.Count);
+        Debug.Log("Before shuffle(Speakers): " + string.Join(", ", RandomSpeakersList));
+        ShuffleList(RandomSpeakersList);
+        Debug.Log("After shuffle(Speakers): " + string.Join(", ", RandomSpeakersList));
 
     }
 
@@ -218,7 +234,7 @@ public class GameManager : MonoBehaviour
         currentSpeaker.PlaySound();
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
-        LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "X", "Played");
+        //LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "X", "Played");
     }
 
     public void PlayRandomSpeaker(int cnt)
@@ -232,6 +248,19 @@ public class GameManager : MonoBehaviour
 
         LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
     }
+
+
+    public void PlayRandomSpeaker(int cnt, int randomIndex)
+    {
+        currentSpeaker = speakers[randomIndex];
+        HRTF_type = HRTFlist[cnt];
+
+        currentSpeaker.PlayWhiteNoise(cnt);
+        Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
+
+        LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
+    }
+
 
 
     public void PlaySoundOnSpecificSpeaker(int speakerIndex)
