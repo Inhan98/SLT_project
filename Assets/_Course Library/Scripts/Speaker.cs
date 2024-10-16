@@ -5,15 +5,29 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Speaker : MonoBehaviour
 {
-    private AudioSource audioSource;
+    private AudioSource audioSource; 
     private MeshRenderer meshRenderer; // MeshRenderer 사용
     private GameManager gameManager;
 
+    public AudioClip personalizedHRTF; //Personalized HRTF
+    public AudioClip genericHRTF; // Generic HRTF
+    public AudioClip unrelatedHRTF; // Unrelated HRTF
+
+
     public AudioClip correctSound; // 정답일 때 재생할 소리
     public AudioClip wrongSound; // 오답일 때 재생할 소리
+
+    public AudioClip clickSound; // 클릭할 때 재생할 소리
+
     public Material correctMaterial; // 정답일 때 적용할 재질
     public Material wrongMaterial; // 오답일 때 적용할 재질
     public Material defaultMaterial; // 기본 재질
+
+    public Material clickMaterial;
+
+    public bool isFake;
+
+    public List<int> RandomNoiseList = new List<int>();
 
     void Awake()
     {
@@ -57,6 +71,28 @@ public class Speaker : MonoBehaviour
         ResetMaterial();
     }
 
+    public void PlayWhiteNoise(int cnt)
+    {  
+        if (cnt==0)
+        {
+            this.audioSource.PlayOneShot(this.personalizedHRTF);
+        }
+        else if (cnt==1)
+        {
+            this.audioSource.PlayOneShot(this.genericHRTF);
+        }
+        else if (cnt==2)
+        {
+            this.audioSource.PlayOneShot(this.unrelatedHRTF);
+        }
+        else
+        {
+            Debug.LogError("There are no assigned white noise.");
+        }
+
+        
+    }
+
 
     public void PlaySound()
     {
@@ -81,6 +117,15 @@ public class Speaker : MonoBehaviour
             this.audioSource.PlayOneShot(this.wrongSound);
         }
     }
+
+    public void PlayClickSound()
+    {
+        if (this.audioSource != null && this.clickSound != null)
+        {
+            this.audioSource.PlayOneShot(this.clickSound);
+        }        
+    }
+
 
     public void ResetMaterial()
     {
