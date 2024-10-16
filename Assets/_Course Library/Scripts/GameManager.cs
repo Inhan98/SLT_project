@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
         ShuffleSpeakers();
         while (trials < totalTrials)
         {
-            //yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
             isClickable = true;
 
             PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]);
