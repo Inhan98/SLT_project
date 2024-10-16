@@ -5,6 +5,8 @@ using System;
 using UnityEngine.XR;
 using System.IO;
 using System.Text;
+using UnityEngine.UI;
+//using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +36,10 @@ public class GameManager : MonoBehaviour
     private List<int> RandomNoiseList = new List<int>();
     private List<int> RandomSpeakersList = new List<int>();
 
+    public Text trialsText;
+
+    public GameObject vrUICanvas;
+
     void Start()
     {
         InitializeSpeakers();
@@ -46,7 +52,17 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Center Speaker does not have a Renderer component.");
         }
 
+        if (vrUICanvas != null)
+        {
+            vrUICanvas.transform.SetParent(Camera.main.transform);
+            vrUICanvas.transform.localPosition = new Vector3(1.45f, 0.85f, -2.0f);
+
+            vrUICanvas.transform.localRotation = Quaternion.identity;
+            //vrUICanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
+        }
+
         StartCoroutine(StartTrials());
+        UpdateTrialsText();
 
     }
 
@@ -100,7 +116,7 @@ public class GameManager : MonoBehaviour
         ShuffleSpeakers();
         while (trials < totalTrials)
         {
-            yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            //yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
             isClickable = true;
 
             PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]);
@@ -109,8 +125,17 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(2.0f);
             ResetSpeakerColor();
             trials++;
+            UpdateTrialsText();
         }
         Debug.Log("All trials completed.");
+    }
+
+    private void UpdateTrialsText()
+    {
+        if (trialsText != null)
+        {
+            trialsText.text = "Trials: " + trials + "/" + totalTrials;
+        }
     }
 
     private IEnumerator WaitForGazeAtCenterSpeaker()
