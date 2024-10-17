@@ -283,7 +283,7 @@ public class GameManager : MonoBehaviour
         currentSpeaker.PlayWhiteNoise(cnt);
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
-        LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
+        //LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
     }
 
 
