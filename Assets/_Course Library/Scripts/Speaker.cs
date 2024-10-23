@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using System.Net.Sockets;
+using System.Text;
+using System;
 
 public class Speaker : MonoBehaviour
 {
     private AudioSource audioSource; 
     private MeshRenderer meshRenderer; // MeshRenderer 사용
     private GameManager gameManager;
+
+    private NetworkStream stream;
 
     public AudioClip personalizedHRTF; //Personalized HRTF
     public AudioClip genericHRTF; // Generic HRTF
@@ -56,6 +61,12 @@ public class Speaker : MonoBehaviour
         {
             Debug.LogError("GameManager component not found in the scene.");
         }
+        else{
+    
+            Debug.Log("GameManager component found in the scene.");
+            //stream = gameManager.stream;
+        }
+        //ConnectToMatlab();
     }
 
     void Start()
@@ -70,6 +81,59 @@ public class Speaker : MonoBehaviour
         LogAllComponents();
         ResetMaterial();
     }
+
+
+
+    public void SetStream(NetworkStream networkStream)
+    {
+        this.stream = networkStream;
+    }
+
+    public void SendSoundToMatlab(int cnt)
+    {
+        if(stream != null)
+        {
+            string soundType = GetSoundType(cnt);
+            string angle = ExtractAngleFromName();
+            string message = $"{soundType},{angle}";
+
+            byte[] data = Encoding.UTF8.GetBytes(message);
+            stream.Write(data, 0, data.Length);
+            Debug.Log("Sound request sent to MATLAB: " + message);
+        }
+
+        else
+        {
+            Debug.LogError("Stream is not initialized.");
+        }
+
+    }
+
+    private string ExtractAngleFromName()
+    {
+        string objectName = this.gameObject.name;
+        int startIndex = objectName.LastIndexOf('_') + 1;
+        return objectName.Substring(startIndex);
+
+    }
+
+    private string GetSoundType(int cnt)
+    {
+        switch(cnt)
+        {
+            case 0:
+                return "Personalized";
+            case 1:
+                return "Generic";
+            case 2:
+                return "Unrelated";
+            default:
+                Debug.LogError("Invalid noise type.");
+                return "Invalid";
+        }
+    }
+
+
 
     public void PlayWhiteNoise(int cnt)
     {  

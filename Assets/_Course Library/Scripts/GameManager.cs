@@ -6,6 +6,9 @@ using UnityEngine.XR;
 using System.IO;
 using System.Text;
 using UnityEngine.UI;
+using System.Net.Sockets;
+
+using System;
 //using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +19,10 @@ public class GameManager : MonoBehaviour
     private Speaker currentSpeaker;
     private Speaker specificSpeaker;
     private string filePath;
+
+    private TcpClient client;
+    public NetworkStream stream;
+
 
     //private bool isLookingAtCenterSpeaker = false;
     public Transform centerSpeakerTransform;
@@ -44,7 +51,11 @@ public class GameManager : MonoBehaviour
     {
         InitializeSpeakers();
         SetupLogFile();
+        ConnectToMatlab();
+        //ConnectToMatlab();
         //StartCoroutine(DelayedResetGame());
+
+        InitializeSpeakersStream();
 
         centerSpeakerRenderer = centerSpeakerTransform.GetComponent<Renderer>();
         if(centerSpeakerRenderer == null)
@@ -60,12 +71,51 @@ public class GameManager : MonoBehaviour
             vrUICanvas.transform.localRotation = Quaternion.identity;
             //vrUICanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
         }
-
+        
         StartCoroutine(StartTrials());
         UpdateTrialsText();
 
     }
 
+    void InitializeSpeakersStream()
+    {
+        foreach (var speaker in speakers)
+        {
+            speaker.SetStream(stream);
+        }
+    }
+
+
+    void ConnectToMatlab()
+    {
+        try{
+            client = new TcpClient("127.0.0.1", 4504);
+            stream = client.GetStream();
+            Debug.Log("Connected to MATLAB server.");
+        }
+        catch (SocketException e)
+        {
+            Debug.LogError("Socket error: " + e.Message);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("General error: " + e.Message);
+        }
+    }
+
+
+
+    void OnApplicationQuit()
+    {
+        if (stream != null)
+        {
+            stream.Close();
+        }
+        if (client != null)
+        {
+            client.Close();
+        }
+    }
 
     private void SetupLogFile()
     {
@@ -268,7 +318,8 @@ public class GameManager : MonoBehaviour
         currentSpeaker = speakers[randomIndex];
         HRTF_type = HRTFlist[cnt];
 
-        currentSpeaker.PlayWhiteNoise(cnt);
+        //currentSpeaker.PlayWhiteNoise(cnt);
+        currentSpeaker.SendSoundToMatlab(cnt);
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
         LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
@@ -280,7 +331,8 @@ public class GameManager : MonoBehaviour
         currentSpeaker = speakers[randomIndex];
         HRTF_type = HRTFlist[cnt];
 
-        currentSpeaker.PlayWhiteNoise(cnt);
+        currentSpeaker.SendSoundToMatlab(cnt);
+        //currentSpeaker.PlayWhiteNoise(cnt);
         Debug.Log("Playing Speaker: "+currentSpeaker.gameObject.name);
 
         //LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
