@@ -65,11 +65,11 @@ public class GameManager : MonoBehaviour
 
         if (vrUICanvas != null)
         {
-            vrUICanvas.transform.SetParent(Camera.main.transform);
-            vrUICanvas.transform.localPosition = new Vector3(1.45f, 0.85f, -2.0f);
+            // vrUICanvas.transform.SetParent(Camera.main.transform);
+            // vrUICanvas.transform.localPosition = new Vector3(1.45f, 0.85f, -2.0f);
 
-            vrUICanvas.transform.localRotation = Quaternion.identity;
-            //vrUICanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
+            // vrUICanvas.transform.localRotation = Quaternion.identity;
+            // //vrUICanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
         }
         
         StartCoroutine(StartTrials());
@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
         ShuffleSpeakers();
         while (trials < totalTrials)
         {
-            //yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
             isClickable = true;
 
             PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]);
