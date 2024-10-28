@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     private List<int> RandomNoiseList = new List<int>();
     private List<int> RandomSpeakersList = new List<int>();
 
+    private List<int> RandomSoundList = new List<int>();
+
     public Text trialsText;
 
     public GameObject vrUICanvas;
@@ -162,8 +164,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartTrials()
     {
-        ShuffleNoise();
-        ShuffleSpeakers();
+        ShuffleSound();
         while (trials < totalTrials)
         {
             yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
@@ -273,7 +274,67 @@ public class GameManager : MonoBehaviour
         ShuffleList(RandomSpeakersList);
         Debug.Log("After shuffle(Speakers): " + string.Join(", ", RandomSpeakersList));
 
+
     }
+
+
+    public void ShuffleSound()
+    {
+        RandomSoundList.Clear();
+        RandomSpeakersList.Clear();
+        RandomNoiseList.Clear();
+
+        int soundnum = 21;
+        for (int i = 0 ; i < soundnum; i++)
+        {
+            for (int j=0 ; j< 5; j++){
+                RandomSoundList.Add(i);
+            }
+        }
+        Debug.Log("Before shuffle: " + string.Join(", ", RandomSoundList));
+        ShuffleList(RandomSoundList);
+        Debug.Log("After shuffle: " + string.Join(", ", RandomSoundList));
+
+        foreach(int value in RandomSoundList)
+        {
+            int SpeakerNum = value%7;
+            int NoiseNum = value/7;
+
+            RandomSpeakersList.Add(SpeakerNum);
+            RandomNoiseList.Add(NoiseNum);
+
+        }
+        Debug.Log("After shuffle(Noise): " + string.Join(", ", RandomNoiseList));
+        Debug.Log("After shuffle(Speakers): " + string.Join(", ", RandomSpeakersList));
+
+        var pairCounts = new Dictionary<(int, int), int>();
+        for (int i = 0; i < RandomSpeakersList.Count; i++)
+        {
+            var pair = (RandomNoiseList[i], RandomSpeakersList[i]);
+            if (pairCounts.ContainsKey(pair))
+                pairCounts[pair]++;
+            else
+                pairCounts[pair] = 1;
+        }
+
+        // 페어 개수를 출력
+        for (int noise = 0; noise <= 2; noise++)
+        {
+            for (int speaker = 0; speaker <= 6; speaker++)
+            {
+                var pair = (noise, speaker);
+                if (pairCounts.ContainsKey(pair))
+                {
+                    Debug.Log($"Pair (Noise: {noise}, Speaker: {speaker}): {pairCounts[pair]} times");
+                }
+                else
+                {
+                    Debug.Log($"Pair (Noise: {noise}, Speaker: {speaker}): 0 times");
+                }
+            }
+        }
+    }
+
 
     public void ShuffleList<T>(List<T> list)
     {
