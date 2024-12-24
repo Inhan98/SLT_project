@@ -14,43 +14,45 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public Transform speakersParent; // 스피커들이 포함된 빈 게임 오브젝트
-    private List<Speaker> speakers = new List<Speaker>();
-    private List<Speaker> nonSpeakerObjects = new List<Speaker>();
-    private Speaker currentSpeaker;
-    private Speaker specificSpeaker;
-    private string filePath;
+    private List<Speaker> speakers = new List<Speaker>(); // 스피커 오브젝트(0도, 30도, 60도, 90도, 120도, 150도, 180도)
+    private List<Speaker> nonSpeakerObjects = new List<Speaker>(); // 가짜 스피커(위의 스피커를 제외한 나머지 스피커 10,20,40...)
+    private Speaker currentSpeaker; // 사운드가 재생된 스피커
+    private Speaker specificSpeaker; // 관리자가 지정한 스피커(외부 통신을 통해 스피커를 지정하면 해당 스피커가 울림) => 현재 프로그램에서는 무시해도 됨.
+    private string filePath; // 파일 경로
 
-    private TcpClient client;
-    public NetworkStream stream;
+    private TcpClient client; // 외부 통신을 위한 tcpclient
+    public NetworkStream stream; // 외부 통신을 위한 stream 
 
 
     //private bool isLookingAtCenterSpeaker = false;
-    public Transform centerSpeakerTransform;
-    private Renderer centerSpeakerRenderer;
-    public Color initialColor = Color.white;
-    public Color targetColor = Color.blue;
+    public Transform centerSpeakerTransform; // 장면 스피커(0도)
+    private Renderer centerSpeakerRenderer; // 정면 스피커 렌더러
+
+    public Color initialColor = Color.white;  // 정면을 보고 있을 때, 정면 스피커의 initial color
+    public Color targetColor = Color.blue; // 정면을 바라보고 있을 때, 정면 스피커의 target color
     public Material defaultMaterial;
 
     private int trials = 0;
 
-    private List<string> HRTFlist = new List<string> { "Personalized", "Generic", "Unrelated" };
+    private List<string> HRTFlist = new List<string> { "Personalized", "Generic", "Unrelated" }; // 개인화된 HRTF: personalized, General HRTF: Generic, 신경망으로 구현된 HRTF: Unrelated
 
     private string HRTF_type;
 
-    private const int totalTrials = 105;
-    private bool isClickable = true;
+    private const int totalTrials = 105; // 전체 테스트 수
+    private bool isClickable = true; 
 
-    private List<int> RandomNoiseList = new List<int>();
-    private List<int> RandomSpeakersList = new List<int>();
+    private List<int> RandomNoiseList = new List<int>(); // 105번의 테스트 중 HRTF 순서 (0: , 1: ,2:)
+    private List<int> RandomSpeakersList = new List<int>(); // 105번의 테스트 중 재생되는 스피커 순서 (0,1,2,3,4,5,6)
 
-    private List<int> RandomSoundList = new List<int>();
+    private List<int> RandomSoundList = new List<int>(); // 105번의 테스트 중 사운드 순서 (0~20)
 
-    public Text trialsText;
+    public Text trialsText;  // 테스트 진행 상황을 표시할 UI 텍스트
 
-    public GameObject vrUICanvas;
+    public GameObject vrUICanvas; // VR UI 캔버스
 
     void Start()
     {
+        // 초기 설정 메서드 호출
         InitializeSpeakers();
         SetupLogFile();
         ConnectToMatlab();
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(DelayedResetGame());
 
         InitializeSpeakersStream();
+
+        // 정면 스피커 렌더러 설정
 
         centerSpeakerRenderer = centerSpeakerTransform.GetComponent<Renderer>();
         if(centerSpeakerRenderer == null)
@@ -74,10 +78,11 @@ public class GameManager : MonoBehaviour
             // //vrUICanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
         }
         
-        StartCoroutine(StartTrials());
-        UpdateTrialsText();
+        StartCoroutine(StartTrials()); // 테스트 시작 코루틴 호출
+        UpdateTrialsText(); // 테스트 상태 업데이트
 
     }
+    // 스피커 스트림 초기화
 
     void InitializeSpeakersStream()
     {
@@ -87,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+     // MATLAB 서버와 연결
     void ConnectToMatlab()
     {
         try{
@@ -106,7 +111,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    // 애플리케이션 종료 시 연결 해제
     void OnApplicationQuit()
     {
         if (stream != null)
@@ -119,9 +124,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 로그 파일 설정
     private void SetupLogFile()
     {
-        string directoryPath = "C:/Users/inhan/Desktop/VR/SpeakerLogs";
+        string directoryPath = "C:/Users/inhan/Desktop/VR/SpeakerLogs"; // Log File 위치. 재설정 필수수
         if (!Directory.Exists(directoryPath))
         {
             Directory.CreateDirectory(directoryPath);
@@ -137,6 +143,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // 스피커 초기화
     void InitializeSpeakers()
     {
         if (speakersParent == null)
@@ -150,37 +157,39 @@ public class GameManager : MonoBehaviour
             Speaker speaker = child.GetComponent<Speaker>();
             if (speaker != null && speaker.isFake == false)
             {
-                speakers.Add(speaker);
+                speakers.Add(speaker); // 사운드가 재생되는 진짜 스피커
                 Debug.Log("Register " + speaker.gameObject.name);
             }
             else
             {
-                nonSpeakerObjects.Add(speaker);
+                nonSpeakerObjects.Add(speaker); // 사운드가 재생되지 않는 가짜짜 스피커
                 Debug.Log("Don't register " + child.gameObject.name);
                 //Debug.LogError($"No Speaker component found on {child.name}");
             }
         }
     }
 
+    // 테스트 시작 코루틴
     private IEnumerator StartTrials()
     {
-        ShuffleSound();
+        ShuffleSound(); //랜덤 순서 설정
         while (trials < totalTrials)
         {
-            yield return StartCoroutine(WaitForGazeAtCenterSpeaker());
+            yield return StartCoroutine(WaitForGazeAtCenterSpeaker()); // 정면 스피커 바라보기 
             isClickable = true;
 
-            PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]);
+            PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]); // 랜덤 스피커 재생
             //PlayRandomSpeaker();
-            yield return new WaitUntil(() => currentSpeaker == null);
-            yield return new WaitForSeconds(2.0f);
-            ResetSpeakerColor();
-            trials++;
-            UpdateTrialsText();
+            yield return new WaitUntil(() => currentSpeaker == null); // 재생 완료 대기
+            yield return new WaitForSeconds(2.0f); // 2초 대기
+            ResetSpeakerColor();  // 스피커 색상 초기화
+            trials++; 
+            UpdateTrialsText(); // 테스트 상태 업데이트
         }
         Debug.Log("All trials completed.");
     }
 
+    // 테스트 진행 상황 업데이트
     private void UpdateTrialsText()
     {
         if (trialsText != null)
@@ -189,6 +198,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    // 정면 스피커 바라보기 대기
     private IEnumerator WaitForGazeAtCenterSpeaker()
     {
         Debug.Log("Look at the center speaker for 3 seconds to start.");
@@ -278,6 +289,7 @@ public class GameManager : MonoBehaviour
     }
 
 
+    // 사운드 셔플
     public void ShuffleSound()
     {
         RandomSoundList.Clear();
@@ -362,6 +374,7 @@ public class GameManager : MonoBehaviour
         Invoke("PlayRandomSpeaker", 2.0f); // 2초 후에 랜덤 스피커 재생
     }
 
+    //랜덤 스피커 재생
     public void PlayRandomSpeaker()
     {
         int randomIndex = UnityEngine.Random.Range(0, speakers.Count);
@@ -372,7 +385,7 @@ public class GameManager : MonoBehaviour
 
         //LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, "X", "Played");
     }
-
+    //랜덤 스피커 재생
     public void PlayRandomSpeaker(int cnt)
     {
         int randomIndex = UnityEngine.Random.Range(0, speakers.Count);
@@ -386,7 +399,7 @@ public class GameManager : MonoBehaviour
         LogSelection(trials.ToString(),currentSpeaker.gameObject.name, currentSpeaker.gameObject.name, HRTF_type,"Played");
     }
 
-
+    // 매트랩으로 사운드 송신
     public void PlayRandomSpeaker(int cnt, int randomIndex)
     {
         currentSpeaker = speakers[randomIndex];
@@ -434,7 +447,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    // 스피커 체크
     public void CheckSpeaker(Speaker selectedSpeaker)
     {
         if(!isClickable) return;
