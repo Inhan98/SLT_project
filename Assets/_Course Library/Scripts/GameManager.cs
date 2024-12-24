@@ -83,7 +83,6 @@ public class GameManager : MonoBehaviour
 
     }
     // 스피커 스트림 초기화
-
     void InitializeSpeakersStream()
     {
         foreach (var speaker in speakers)
@@ -127,7 +126,7 @@ public class GameManager : MonoBehaviour
     // 로그 파일 설정
     private void SetupLogFile()
     {
-        string directoryPath = "C:/Users/inhan/Desktop/VR/SpeakerLogs"; // Log File 위치. 재설정 필수수
+        string directoryPath = "C:/Users/inhan/Desktop/VR/SpeakerLogs"; // Log File 위치. 재설정 필수
         if (!Directory.Exists(directoryPath))
         {
             Directory.CreateDirectory(directoryPath);
@@ -162,7 +161,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                nonSpeakerObjects.Add(speaker); // 사운드가 재생되지 않는 가짜짜 스피커
+                nonSpeakerObjects.Add(speaker); // 사운드가 재생되지 않는 가짜 스피커
                 Debug.Log("Don't register " + child.gameObject.name);
                 //Debug.LogError($"No Speaker component found on {child.name}");
             }
@@ -172,10 +171,18 @@ public class GameManager : MonoBehaviour
     // 테스트 시작 코루틴
     private IEnumerator StartTrials()
     {
-        ShuffleSound(); //랜덤 순서 설정
+        ShuffleSound(); // trial 사운드 랜덤 재생 순서 설정
         while (trials < totalTrials)
         {
-            yield return StartCoroutine(WaitForGazeAtCenterSpeaker()); // 정면 스피커 바라보기 
+            if (XRSettings.isDeviceActive) // VR과 연결되어 있을 때만 GazeAtCenter가 실행됨.
+            {
+                yield return StartCoroutine(WaitForGazeAtCenterSpeaker()); // 정면 스피커 바라보기
+            }
+            else
+            {
+                Debug.Log("VR device is not connected. Skipping gaze check.");
+            }
+
             isClickable = true;
 
             PlayRandomSpeaker(RandomNoiseList[trials], RandomSpeakersList[trials]); // 랜덤 스피커 재생
@@ -208,14 +215,14 @@ public class GameManager : MonoBehaviour
         while( lookTime < 3.0f)
         {
             Quaternion headsetRotation = InputTracking.GetLocalRotation(XRNode.Head);
-            Vector3 forward = headsetRotation * Vector3.forward;
+            Vector3 forward = headsetRotation * Vector3.forward; // forward = q*v*q^(-1)
 
             Vector3 toCenterSpeaker = (centerSpeakerTransform.position - Camera.main.transform.position).normalized;
 
             Vector3 headEulerAngles = headsetRotation.eulerAngles; 
             Debug.Log($"Head angle (Pitch: {headEulerAngles.x}, Yaw: {headEulerAngles.y}, Roll: {headEulerAngles.z})");
 
-            if (Vector3.Dot(forward, toCenterSpeaker) > 0.95f)
+            if (Vector3.Dot(forward, toCenterSpeaker) > 0.95f) // centerspeaker와 headrotation의 방향이 일치하는 동안 center speaker의 색깔이 바뀜.
             {
                 lookTime += Time.deltaTime;
 
@@ -230,8 +237,7 @@ public class GameManager : MonoBehaviour
                 centerSpeakerRenderer.material.color = initialColor;
             }
 
-            yield return null;
-
+            yield return null; 
         }
 
         Debug.Log("Look confirmed. Starting random speaker sound.");
@@ -244,6 +250,7 @@ public class GameManager : MonoBehaviour
         ResetGame();
     }
 
+    // 스피커 색 초기화
     public void ResetSpeakerColor()
     {
         foreach (var speaker in speakers)
@@ -253,11 +260,11 @@ public class GameManager : MonoBehaviour
         }
         foreach (var speaker in nonSpeakerObjects)
         {
-            Debug.Log("Register Speaker "+speaker.gameObject.name);
+            Debug.Log("Register Fake Speaker "+speaker.gameObject.name);
             speaker.ResetMaterial();
         }
     }
-
+    //이번 프로젝트에서는 사용하지 않은 코드(유니티 상에서 소리를 재생할 때 사용용)
     public void ShuffleNoise()
     {
         for (int i = 0; i <35; i++)
@@ -272,6 +279,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("After shuffle(Noise): " + string.Join(", ", RandomNoiseList));
     }
 
+    //이번 프로젝트에서는 사용하지 않은 코드
     public void ShuffleSpeakers()
     {
         int SpeakerNums = GetSpeakerCount();
@@ -447,12 +455,12 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // 스피커 체크
+    // 스피커를 포인터로 클릭할 시 Reaction code.
     public void CheckSpeaker(Speaker selectedSpeaker)
     {
         if(!isClickable) return;
 
-        isClickable = false;
+        isClickable = false; // 한 스피커를 클릭하면 한 trial이 끝날 때까지 다른 스피커는 더 이상 클릭할 수 없음.
 
         Quaternion headsetRotation = InputTracking.GetLocalRotation(XRNode.Head);
         Vector3 eulerAngles = headsetRotation.eulerAngles;

@@ -12,7 +12,7 @@ public class Speaker : MonoBehaviour
     private MeshRenderer meshRenderer; // MeshRenderer 사용
     private GameManager gameManager;
 
-    private NetworkStream stream;
+    private NetworkStream stream; // matlab 통신을 위한 코드.
 
     public AudioClip personalizedHRTF; //Personalized HRTF
     public AudioClip genericHRTF; // Generic HRTF
@@ -30,9 +30,11 @@ public class Speaker : MonoBehaviour
 
     public Material clickMaterial;
 
-    public bool isFake;
+    public bool isFake; // fake가 on 되어 있을 때 스피커에서 소리가 재생이 되지 않음.
 
     public List<int> RandomNoiseList = new List<int>();
+
+
 
     void Awake()
     {
@@ -89,16 +91,17 @@ public class Speaker : MonoBehaviour
         this.stream = networkStream;
     }
 
+    // 매트랩으로 stream 보내는 코드
     public void SendSoundToMatlab(int cnt)
     {
         if(stream != null)
         {
-            string soundType = GetSoundType(cnt);
-            string angle = ExtractAngleFromName();
+            string soundType = GetSoundType(cnt);  // list에서 personalized, general, unrelated로 변환환
+            string angle = ExtractAngleFromName(); // object name에서 각도 추출하는 함수
             string message = $"{soundType},{angle}";
 
             byte[] data = Encoding.UTF8.GetBytes(message);
-            stream.Write(data, 0, data.Length);
+            stream.Write(data, 0, data.Length); // 신호 송신
             Debug.Log("Sound request sent to MATLAB: " + message);
         }
 
@@ -135,7 +138,7 @@ public class Speaker : MonoBehaviour
 
 
 
-    public void PlayWhiteNoise(int cnt)
+    public void PlayWhiteNoise(int cnt) // 사운드 재생 함수 => 매트랩에서 사운드 재생 시 필요없음
     {  
         if (cnt==0)
         {
@@ -191,7 +194,8 @@ public class Speaker : MonoBehaviour
     }
 
 
-    public void ResetMaterial()
+
+    public void ResetMaterial() // speaker color 초기화
     {
         Debug.Log("ResetMaterial called on " + this.gameObject.name);
         if (this.defaultMaterial == null)
@@ -205,7 +209,7 @@ public class Speaker : MonoBehaviour
         SetMaterial(this.defaultMaterial);
     }
 
-    public void SetMaterial(Material material)
+    public void SetMaterial(Material material) // 스피커 color 설정
     {
         Debug.Log("SetMaterial called on " + this.gameObject.name + " with material " + material.name);
         if (this.meshRenderer != null)
@@ -226,7 +230,7 @@ public class Speaker : MonoBehaviour
         }
     }
 
-    public void OnSelectEntered(SelectEnterEventArgs args)
+    public void OnSelectEntered(SelectEnterEventArgs args) // 클리커 클릭 시 반응하는 함수.
     {
         Debug.Log("OnSelectEntered called on " + this.gameObject.name);
         if (this.gameManager != null)
