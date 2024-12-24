@@ -40,7 +40,7 @@
 ![image](https://github.com/user-attachments/assets/c92b1c33-2440-459e-8d32-23684e5babbc)
 
 ### 추가 팁
-![image](https://github.com/user-attachments/assets/6eb2f4ee-3120-44d7-8938-9e28d9046849)
+![image](https://github.com/user-attachments/assets/a973ce3c-1324-442b-8b50-33d9f06e0a83)
 - 스피커와 상호 작용하기 위해서는 speaker object의 Select에 위 그림과 같이 설정되어 있어야 합니다. 그렇지 않으면 speaker는 클릭해도 아무 반응을 하지 않습니다.
 
 ## Log File 위치 정하기
