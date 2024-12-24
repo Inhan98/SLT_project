@@ -40,14 +40,14 @@
 ![image](https://github.com/user-attachments/assets/c92b1c33-2440-459e-8d32-23684e5babbc)
 
 ### 추가 팁
-![image](https://github.com/user-attachments/assets/a973ce3c-1324-442b-8b50-33d9f06e0a83)
+![image](https://github.com/user-attachments/assets/1d29868d-8ade-4c08-9fe0-af0ab513b90d)
 - 스피커와 상호 작용하기 위해서는 speaker object의 Select에 위 그림과 같이 설정되어 있어야 합니다. 그렇지 않으면 speaker는 클릭해도 아무 반응을 하지 않습니다.
 
 ## Log File 위치 정하기
 - Assets > Course Library > Scripts > GameManager.cs
 - directoryPath에서 Filepath 정하기
 
-![image](https://github.com/user-attachments/assets/d0d75353-ff2b-4b29-8f45-d2b6b5e41514)
+![image](https://github.com/user-attachments/assets/e9cf1958-576f-423b-8cb1-59df9c7178b1)
 ## 매트랩 설정
  Unity 프로그램을 실행하기에 앞서 github project에 있는 **SLT_sound_play.m** 파일을 열고 먼저 실행하면 server가 실행되며 외부 명령을 받을 수 있는 상태가 됩니다! 이후 Unity를 Play하면 다른 설정 건드리지 않고 진행할 수 있습니다.
 
